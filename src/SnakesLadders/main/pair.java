@@ -25,4 +25,9 @@ public class pair {
             this.y = y;
         }
 
+        public boolean compare(pair p)
+        {
+            return (this.x == p.getX() && this.y == p.getY());
+        }
+
 }

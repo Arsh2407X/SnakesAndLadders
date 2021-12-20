@@ -14,6 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Controller {
@@ -50,14 +51,24 @@ public class Controller {
     }
     @FXML
     void startGame(MouseEvent event) throws IOException {
+        // declaring boards
+        Board board1 = new Board();
+//        Board board2 = new Board();
+//        Board board3 = new Board();
+//        Board board4 = new Board();
+//        Board board5 = new Board();
+        //setUpBoard1(board1);
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../../resources/scenes/gameMenu.fxml"));
         //Parent root = FXMLLoader.load(getClass().getResource("../../resources/scenes/startMenu.fxml"));
         Parent root = fxmlLoader.load();
         GameController c = fxmlLoader.getController();
         Random rand = new Random();
-        int boardNumber = rand.nextInt(1,6);
+        // change this to 6
+        int boardNumber = rand.nextInt(1,2);
         System.out.println(boardNumber);
-        c.setUpBoard(boardNumber);
+        ArrayList<Board> boards = new ArrayList<>();
+        boards.add(board1);
+        c.setUpBoard(boardNumber, boards);
         primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         primaryStage.setScene(new Scene(root,640 ,800));
         primaryStage.setTitle("Snakes & Ladders");
@@ -66,4 +77,7 @@ public class Controller {
         // primaryStage.setScene(startMenu);
         primaryStage.show();
     }
+//    void setUpBoard1(Board board1){
+//        Snake snake1 = new Snake(3, 7, 4, 9);
+//    }
 }
