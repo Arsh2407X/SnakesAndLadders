@@ -4,7 +4,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SnakesLadders.main.Controller">
    <children>
       <ImageView fitHeight="800.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
@@ -25,6 +24,11 @@
       <ImageView fx:id="startButton" fitHeight="82.0" fitWidth="170.0" layoutX="237.0" layoutY="303.0" onMouseClicked="#startGame" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="file:/C:/Users/arshg/Desktop/ApProject/SnakesAndLadders/src/resources/assets/button_start.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="intro" fitHeight="800.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/intro.png" />
          </image>
       </ImageView>
    </children>
