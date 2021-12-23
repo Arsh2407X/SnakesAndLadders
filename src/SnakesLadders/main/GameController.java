@@ -36,8 +36,6 @@ import static javafx.scene.input.DataFormat.URL;
 public class GameController implements Initializable {
 
 
-    private int x = 0;
-    private int y = 0;
     boolean isFirstPlayerTurn;
 
     @FXML
@@ -80,14 +78,6 @@ public class GameController implements Initializable {
     @FXML
     private Group WinBox;
 
-
-
-
-    private int box1 = 0;
-    private int box2 = 0;
-
-    private boolean bikeIsLocked = true;
-    private boolean carIsLocked = true;
 
     private pair bike;
     private pair car;
